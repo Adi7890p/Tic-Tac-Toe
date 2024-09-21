@@ -74,6 +74,7 @@ function ai(n){
         }
         if(man!=1){
             for(i=0;i<8;++i){
+                console.log('h1');
                 checky = ly.filter(value => logic[i].includes(value));//check how many num of logic1 in ly
                 checkx = lx.filter(value => logic[i].includes(value));//check how many num of logic1 in ly
                 if (checkx.length==2 && checky.length==0){
@@ -117,14 +118,14 @@ function win(){
             bulb.style.visibility="hidden";
             p2.style.visibility="hidden";  
         }
-        else if(checky.length==3){
+        if(checky.length==3 && checkx.length!=3){
             n=undefined;
             alert("Computer Win ,you lose!!!");
             p1.style.visibility="hidden";
             bulb.style.visibility="hidden";
             p2.style.visibility="hidden";  
         }
-        else if(checkx.length!=3 && checky.length!=3 && n==9){
+        if(checkx.length!=3 && checky.length!=3 && n==9){
             n=undefined;
             alert("Draw!!!");
             p1.style.visibility="hidden";
@@ -144,8 +145,6 @@ b1.onclick=()=>{
         i=0;
         xicon(i);
         lx.push(i+1);
-        win();
-        win();
         win();
         list = list.filter(value => value !== 1);
         m = n;
@@ -185,8 +184,6 @@ b2.onclick=()=>{
         i=1;
         xicon(i);
         lx.push(i+1);
-        win();
-        win();
         win();
         list = list.filter(value => value !== 2);
         m = n;
@@ -321,6 +318,7 @@ b5.onclick=()=>{
         ly.push(a+1);
         list = list.filter(value => value !== 5);
         b5.onclick=null;
+        win();
     }
 
 
