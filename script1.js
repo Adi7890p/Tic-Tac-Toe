@@ -74,6 +74,8 @@ function ai(n){
         }
         if(man!=1){
             for(i=0;i<8;++i){
+                checky = ly.filter(value => logic[i].includes(value));//check how many num of logic1 in ly
+                checkx = lx.filter(value => logic[i].includes(value));//check how many num of logic1 in ly
                 if (checkx.length==2 && checky.length==0){
                     rn = logic[i].filter(value => !lx.includes(value));
                     console.log('a2');
