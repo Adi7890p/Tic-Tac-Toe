@@ -1,7 +1,7 @@
 let list = [1,2,3,4,5,6,7,8,9];
 let lx = [],ly = [],logic = [];
 let g = 0;
-let man = undefined;
+let ak = undefined;
 let n = 0;
 let m = null;
 let i = null;
@@ -68,11 +68,11 @@ function ai(n){
                 rn = logic[i].filter(value => !ly.includes(value));
                 console.log('a1');
                 g = 1;
-                man = 1;
+                ak = 1;
                 break;
             }
         }
-        if(man!=1){
+        if(ak!=1){
             for(i=0;i<8;++i){
                 console.log('h1');
                 checky = ly.filter(value => logic[i].includes(value));//check how many num of logic1 in ly
