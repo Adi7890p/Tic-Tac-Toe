@@ -32,6 +32,8 @@ h1{
     background-color: darkseagreen;
 }
 .btn{
+    width:50%;
+    height:50%;
     display: flex;
     flex-direction: row;
 }
